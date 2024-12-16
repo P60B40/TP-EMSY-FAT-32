@@ -45,8 +45,6 @@ Voici les adresses des débuts des partitions.
 Le nombre de secteurs est de 3915713
 disque de 3915776 secteurs : 66 secteurs utilisé par la partie disque.
 
-* nombre secteurs par cluster?
-le nobre est de 8 secteur par cluster.
 
 * Le "Boot record" se situe dans la zone "reserved sectors" du début de la partition. Quel espace cette zone occupe-t-elle ?
 elle occupe 560 secteurs.
@@ -62,6 +60,11 @@ secteurs par FAT est de 3816 / nombre de FAT est de 2
   ![disque logique](https://github.com/user-attachments/assets/11f6038b-8409-43f9-bbce-c89c79f12478)
 
 ## Etude du BOOT RECORD
-
-
+### Question A
+Comparez le nombre de secteurs total à la taille de la partition (disque logique). indiquée dans le MBR ?
+* le nombre de secteurs total pour le disque physique 3915776
+* nombre de secteurs total pour le disque logique 3915712
+### Question B
+nombre secteurs par cluster?
+* le nobre est de 8 secteur par cluster.
 
