@@ -1,6 +1,6 @@
 # TP-EMSY-FAT-32
 
-##Consigne 
+## Consigne 
 * Le travail se fait par groupe de 2 élèves.
 * Un rapport par groupe de 2 élèves ; chacun maîtrise son contenu.
 * Votre rapport doit expliquer et commenter votre démarche, les difficultés rencontrées, 
@@ -10,4 +10,4 @@ expliquées.
 * Pour faciliter la lecture, merci d'organiser votre rapport selon l'ordre et la numérotation 
 de la donnée.
 
-##Formatage de la clé
+## Formatage de la clé
