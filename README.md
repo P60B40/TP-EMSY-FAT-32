@@ -25,9 +25,29 @@ dans ma partition primaire dans l'option navigate l 'adresse de ma partition 1 d
 
 ## Question A
 Il y'a 4 partition primaire, les partitions 2, 3, 4 ont 0 secteur.
+## Question B
 Voici les adresses des débuts des partitions.
+
 ![nombre partition](https://github.com/user-attachments/assets/0e9c6cad-0fc2-4bf9-89cc-c7fc13c8bb9d)
 * Partition 1 : 1BE
 * Partition 2 : 1CE
 * Partition 3 : 1DE
 * Partition 4 : 1EE
+
+### Décodage des données
+* nombre de secteurs (partition logique) ?
+Le nombre de secteurs est de 3915713
+disque de 3915776 secteurs : 66 secteurs utilisé par la partie disque.
+
+* nombre secteurs par cluster?
+le nobre est de 8 secteur par cluster.
+
+* Le "Boot record" se situe dans la zone "reserved sectors" du début de la partition. Quel espace cette zone occupe-t-elle ?
+elle occupe 560 secteurs.
+
+* Combien y a-t-il de FAT et quel espace occupent-elles chacune ?
+secteurs par FAT est de 3816 / nombre de FAT est de 2
+
+## Question C
+
+
