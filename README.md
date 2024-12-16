@@ -11,9 +11,9 @@ expliquées.
 de la donnée.
 
 ## Formatage de la clé
-Selon c'est paramètre (VM widows 7 ou windows 10, même resultat)
+* Selon c'est paramètre (VM widows 7 ou windows 10, même resultat)
 ### Manipulation dans la VM  
-Nous avons ouvert windows 7 sur machine virtuelle pour une question de sécurité.
+* Nous avons ouvert windows 7 sur machine virtuelle pour une question de sécurité.
 pour que la VM lise notre clé usb il faut aller dans l'option de la VM player ->Removable device -> et selctionner la clé usb.
 Nous avons été chercher diskeditor sur notre disque K: pour le copier et l'ouvrir sur notre VM.
 
