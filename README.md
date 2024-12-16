@@ -22,3 +22,5 @@ Nous avons été chercher diskeditor sur notre disque K: pour le copier et l'ouv
 Nous avons rélever le nombre de secteur du disque physique (voir capture) nous avons un disque de 3915776 secteurs.
 log du contenue du secteur 0 : voir fichier hdd_info.xml
 dans ma partition primaire dans l'option navigate l 'adresse de ma partition 1 débute à l'adresse F8.
+
+## Question A)
