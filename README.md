@@ -23,4 +23,11 @@ Nous avons rélever le nombre de secteur du disque physique (voir capture) nous 
 log du contenue du secteur 0 : voir fichier hdd_info.xml
 dans ma partition primaire dans l'option navigate l 'adresse de ma partition 1 débute à l'adresse F8.
 
-## Question A)
+## Question A
+Il y'a 4 partition primaire, les partitions 2, 3, 4 ont 0 secteur.
+Voici les adresses des débuts des partitions.
+![nombre partition](https://github.com/user-attachments/assets/0e9c6cad-0fc2-4bf9-89cc-c7fc13c8bb9d)
+* Partition 1 : 1BE
+* Partition 2 : 1CE
+* Partition 3 : 1DE
+* Partition 4 : 1EE
