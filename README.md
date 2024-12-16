@@ -11,3 +11,4 @@ expliquées.
 de la donnée.
 
 ## Formatage de la clé
+![image](https://github.com/user-attachments/assets/11c6cc74-0e47-4904-9691-9923d2e55827)
