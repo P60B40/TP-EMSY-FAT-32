@@ -63,7 +63,7 @@ contenu qu'il s'agit bien du début de la partition ?
 * La valeur 80 en Hexadécimal correspond au début de la partition.
 
 
-  ![disque logique](https://github.com/user-attachments/assets/11f6038b-8409-43f9-bbce-c89c79f12478)
+![disque logique](https://github.com/user-attachments/assets/11f6038b-8409-43f9-bbce-c89c79f12478)
 
 ## Etude du BOOT RECORD
 ### Question A
