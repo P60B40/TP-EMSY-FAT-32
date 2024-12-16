@@ -28,9 +28,11 @@ dans ma partition primaire dans l'option navigate l 'adresse de ma partition 1 d
 ## Etude du MBR / FAT 32
 
 ### Question A
-Il y'a 4 partition primaire, les partitions 2, 3, 4 ont 0 secteur.
+Repérez la zone des partitions. Combien y a-t-il de partitions ?
+* Il y'a 4 partition primaire, les partitions 2, 3, 4 ont 0 secteur.
 ### Question B
-Voici les adresses des débuts des partitions.
+Décodez les informations de(s) partition(s) en vous basant sur le support de cours ?
+*Voici les adresses des débuts des partitions.
 
 ![nombre partition](https://github.com/user-attachments/assets/0e9c6cad-0fc2-4bf9-89cc-c7fc13c8bb9d)
 * Partition 1 : 1BE
@@ -41,21 +43,23 @@ Voici les adresses des débuts des partitions.
 ![taille partition](https://github.com/user-attachments/assets/b879cef6-0595-49fb-a301-262e25fa0f22)
 
 #### Décodage des données
-* nombre de secteurs (partition logique) ?
-Le nombre de secteurs est de 3915713
+nombre de secteurs (partition logique) ?
+* Le nombre de secteurs est de 3915713
 disque de 3915776 secteurs : 66 secteurs utilisé par la partie disque.
 
 
-* Le "Boot record" se situe dans la zone "reserved sectors" du début de la partition. Quel espace cette zone occupe-t-elle ?
-elle occupe 560 secteurs.
+Le "Boot record" se situe dans la zone "reserved sectors" du début de la partition. Quel espace cette zone occupe-t-elle ?
+* elle occupe 560 secteurs.
 
-* Combien y a-t-il de FAT et quel espace occupent-elles chacune ?
-secteurs par FAT est de 3816 / nombre de FAT est de 2
+Combien y a-t-il de FAT et quel espace occupent-elles chacune ?
+* secteurs par FAT est de 3816 / nombre de FAT est de 2
 
 ### Question C
-* Calculez le secteur de début de la 1ère FAT, de la 2ème FAT (copie de sécurité de la 1ère), et de la zone de stockage de données ?
-  la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la
-  fat1 (560 +3816) stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816)).
+Affichez le contenu du secteur de départ de la partition 1. Montrez en analysant le 
+contenu qu'il s'agit bien du début de la partition 
+* ![MBR du taille réel du disque](https://github.com/user-attachments/assets/4e19a991-e571-4872-873a-793312dc2532)
+  La valeur 80 en Hexadécimal correspond au début de la partition.
+
 
   ![disque logique](https://github.com/user-attachments/assets/11f6038b-8409-43f9-bbce-c89c79f12478)
 
@@ -66,5 +70,18 @@ Comparez le nombre de secteurs total à la taille de la partition (disque logiqu
 * nombre de secteurs total pour le disque logique 3915712
 ### Question B
 nombre secteurs par cluster?
-* le nobre est de 8 secteur par cluster.
+* le nombre est de 8 secteur par cluster.
+### Question C
+Le "Boot record" se situe dans la zone "reserved sectors" du début de la partition. Quel 
+espace cette zone occupe-t-elle ?
+* disque physique - disque logique = 3915776 - 3915712 = 64
+### Question D
+ Combien y a-t-il de FAT et quel espace occupent-elles chacune ?
+ * Il y'a 2 FAT et le nombre de secteur par est de 3816 secteurs.
+### Question E
+ Calculez le secteur de début de la 1ère FAT, de la 2ème FAT (copie de sécurité de la 
+1ère), et de la zone de stockage de données. 
+* ![MBR du taille réel du disque](https://github.com/user-attachments/assets/f5ee3b5b-78ae-4d61-b60a-3d11242af5b2)
+  la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la FAT1 (560 +3816).
+  Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816)).
 
