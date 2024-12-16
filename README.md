@@ -56,7 +56,8 @@ Combien y a-t-il de FAT et quel espace occupent-elles chacune ?
 
 ### Question C
 Affichez le contenu du secteur de départ de la partition 1. Montrez en analysant le 
-contenu qu'il s'agit bien du début de la partition 
+contenu qu'il s'agit bien du début de la partition ?
+
 ![MBR du taille réel du disque](https://github.com/user-attachments/assets/4e19a991-e571-4872-873a-793312dc2532)
 
 * La valeur 80 en Hexadécimal correspond au début de la partition.
