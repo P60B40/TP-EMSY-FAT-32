@@ -105,7 +105,7 @@ Pour le fichier tutu :
 - à l'offset 26 nous obtenons le numéro du premier cluster du fichier (low word - 16 bits de poids faible) là 00 0A
 - à l'offset 28 nous obtenons la taille du fichier ici 00 00 17 CA
 
-* Calcule de l'adresse de départ des données des fichiers :
+Calcule de l'adresse de départ des données des fichiers :
 - TOTO : 512*8*6 = 24576 
 - TITI : 512*8*7 = 28672
 - TUTU : 512*8*10 = 40960
