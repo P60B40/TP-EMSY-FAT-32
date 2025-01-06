@@ -88,5 +88,28 @@ espace cette zone occupe-t-elle ?
 * la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la FAT1 (560 +3816).
   Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816))=3907521.
 
-  
+* Localistion d'un fichier
+
+Pour le fichier toto :
+- à l'offset 20 nous obtenons  le numéro du premier cluster du fichier (high word - 16 nits de poid fort) là 00 00
+- à l'offset 26 nous obtenons le numéro du premier cluster du fichier (low word - 16 bits de poids faible) là 00 06
+- à l'offset 28 nous obtenons la taille du fichier ici 00 00 00 17
+
+Pour le fichier titi :
+- à l'offset 20 nous obtenons  le numéro du premier cluster du fichier (high word - 16 nits de poid fort) là 00 00
+- à l'offset 26 nous obtenons le numéro du premier cluster du fichier (low word - 16 bits de poids faible) là 00 07
+- à l'offset 28 nous obtenons la taille du fichier ici 00 00 26 13
+
+Pour le fichier tutu :
+- à l'offset 20 nous obtenons  le numéro du premier cluster du fichier (high word - 16 nits de poid fort) là 00 00
+- à l'offset 26 nous obtenons le numéro du premier cluster du fichier (low word - 16 bits de poids faible) là 00 0A
+- à l'offset 28 nous obtenons la taille du fichier ici 00 00 17 CA
+
+* Calcule de l'adresse de départ des données des fichiers :
+- TOTO : 512*8*6 = 24576 
+- TITI : 512*8*7 = 28672
+- TUTU : 512*8*10 = 40960
+
+offset pas de corrélation !
+![adresse des fichiers](https://github.com/user-attachments/assets/998eb368-b095-4d60-baaf-17f65f4a773b)
 
