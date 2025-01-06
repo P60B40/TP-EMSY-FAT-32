@@ -113,3 +113,10 @@ Calcule de l'adresse de départ des données des fichiers :
 offset pas de corrélation !
 ![adresse des fichiers](https://github.com/user-attachments/assets/998eb368-b095-4d60-baaf-17f65f4a773b)
 
+Secteur utilisé :
+- en vert TOTO
+- en orange TITI
+- en rouge TUTU
+![secteur fichier](https://github.com/user-attachments/assets/e0f14b0e-e766-4c15-88ce-d8e6aa1655bf)
+
+
