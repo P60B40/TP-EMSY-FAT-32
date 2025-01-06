@@ -86,5 +86,7 @@ espace cette zone occupe-t-elle ?
 ![MBR du taille réel du disque](https://github.com/user-attachments/assets/f5ee3b5b-78ae-4d61-b60a-3d11242af5b2)
 
 * la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la FAT1 (560 +3816).
-  Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816)).
+  Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816))=3907521.
+
+  
 
