@@ -88,7 +88,7 @@ espace cette zone occupe-t-elle ?
 * la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la FAT1 (560 +3816).
   Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816))=3907521.
 
-* Localistion d'un fichier
+## Localistion d'un fichier
 
 Pour le fichier toto :
 - à l'offset 20 nous obtenons  le numéro du premier cluster du fichier (high word - 16 nits de poid fort) là 00 00
