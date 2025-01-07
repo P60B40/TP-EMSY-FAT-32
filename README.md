@@ -126,7 +126,7 @@ Pour le fichier tutu :
 - TITI : 512 * 8 * 7 = 28672
 - TUTU : 512 * 8 * 10 = 40960
 
-offset pas de corrélation !
+- capture d'écran de Disk editor les offsets n'ont pas de corrélation !
 
 ![adresse des fichiers](https://github.com/user-attachments/assets/998eb368-b095-4d60-baaf-17f65f4a773b)
 
