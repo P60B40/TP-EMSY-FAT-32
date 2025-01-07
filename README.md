@@ -89,7 +89,6 @@ espace cette zone occupe-t-elle ?
   Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816))=3907521.
 
 ## Localistion d'un fichier
-
 Pour le fichier toto :
 - à l'offset 20 nous obtenons  le numéro du premier cluster du fichier (high word - 16 nits de poid fort) là 00 00
 - à l'offset 26 nous obtenons le numéro du premier cluster du fichier (low word - 16 bits de poids faible) là 00 06
@@ -105,7 +104,7 @@ Pour le fichier tutu :
 - à l'offset 26 nous obtenons le numéro du premier cluster du fichier (low word - 16 bits de poids faible) là 00 0A
 - à l'offset 28 nous obtenons la taille du fichier ici 00 00 17 CA
 
-Calcule de l'adresse de départ des données des fichiers :
+## Calcule de l'adresse de départ des données des fichiers :
 - TOTO : 512 * 8 * 6 = 24576 
 - TITI : 512 * 8 * 7 = 28672
 - TUTU : 512 * 8 * 10 = 40960
@@ -113,13 +112,13 @@ Calcule de l'adresse de départ des données des fichiers :
 offset pas de corrélation !
 ![adresse des fichiers](https://github.com/user-attachments/assets/998eb368-b095-4d60-baaf-17f65f4a773b)
 
-Secteur utilisé :
+## Secteur utilisé :
 - en vert TOTO
 - en orange TITI
 - en rouge TUTU
 ![secteur fichier](https://github.com/user-attachments/assets/e0f14b0e-e766-4c15-88ce-d8e6aa1655bf)
 
-Visualisation du contenue des fichier :
+## Visualisation du contenue des fichier :
 - Toto
  ![contenu toto](https://github.com/user-attachments/assets/9755bf21-394b-4474-8602-c04da39ba00c)
 - Titi (début)
@@ -131,7 +130,7 @@ Visualisation du contenue des fichier :
 - Tutu (fin)
 ![contenu tutu2](https://github.com/user-attachments/assets/99c0b5ab-6867-4c54-85f2-6ca87d23c697)
 
-Effacement d'un fichier :
+## Effacement d'un fichier :
 Nous avons effacer le fichier Titi.txt
 ![effacement du fichier titi](https://github.com/user-attachments/assets/bb909172-534f-4e13-b7b0-52c9490202cb)
 Dans la FAT nous ne voyons pas le fichier Titi on le voit avec les données 00 qui remplace les données FF, dans le Root directory Titi est toujours présent 
@@ -139,10 +138,9 @@ Dans la FAT nous ne voyons pas le fichier Titi on le voit avec les données 00 q
 Les données du fichier txt sont toujours présent :
 ![donée titi toujours présantes](https://github.com/user-attachments/assets/13edd308-8b33-466e-bb36-7a9fa249eebc)
 
-Restauration d'un fichier effacer :
+## Restauration d'un fichier effacer :
 pour la restauration du fichier nous pouvons remettre les secteurs utilisés dans la FAT
-
-Déscriptions de la manipulation :
+### Déscriptions de la manipulation :
 - appuyer sur Edit dans le menu en haut
 - Nous allons réecrire le contenue précedent (avant effacement des données) dans la FAT)
 - sauvegarder les modification avec le boutton save (ne pas oublier de relancer Disk Editor)
@@ -150,11 +148,11 @@ Déscriptions de la manipulation :
 - on peut voir que le fichier et de retour
 ![titi le retour](https://github.com/user-attachments/assets/c53db823-097d-4ad8-9f5f-15148a567c86)
 
-Effet de la fragmentation des fichiers :
+### Effet de la fragmentation des fichiers :
 - on constate que le fichier Titi prend plus de secteur.
 ![donée titi toujours présantes](https://github.com/user-attachments/assets/18d0065f-7ce7-4aa4-8136-8642bd8917c7)
 - Par rapport au adresse nous remarquons que le fichier Titi se trouve dans un secteur plus loin après le fichier Tutu, les données sont donc fragmenter dans deux secteurs qui ne se suivent pas
 ![titi suite donnée frag](https://github.com/user-attachments/assets/f105d639-fa58-4389-a5aa-807ec74df0fb)
-- 
+ 
 
 
