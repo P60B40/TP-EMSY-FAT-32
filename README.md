@@ -134,7 +134,7 @@ offset pas de corrélation !
 - en vert TOTO
 - en orange TITI
 - en rouge TUTU
-- 
+
 ![secteur fichier](https://github.com/user-attachments/assets/e0f14b0e-e766-4c15-88ce-d8e6aa1655bf)
 
 ## Visualisation du contenue des fichier :
