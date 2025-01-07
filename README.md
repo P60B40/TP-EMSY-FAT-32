@@ -132,10 +132,15 @@ offset pas de corrélation !
 
 ## Effacement d'un fichier :
 Nous avons effacer le fichier Titi.txt
+
 ![effacement du fichier titi](https://github.com/user-attachments/assets/bb909172-534f-4e13-b7b0-52c9490202cb)
+
 Dans la FAT nous ne voyons pas le fichier Titi on le voit avec les données 00 qui remplace les données FF, dans le Root directory Titi est toujours présent 
+
 ![root directory titi toujours présant](https://github.com/user-attachments/assets/5897e496-0896-47d4-bcf2-22e2d0738ec2)
+
 Les données du fichier txt sont toujours présent :
+
 ![donée titi toujours présantes](https://github.com/user-attachments/assets/13edd308-8b33-466e-bb36-7a9fa249eebc)
 
 ## Restauration d'un fichier effacer :
