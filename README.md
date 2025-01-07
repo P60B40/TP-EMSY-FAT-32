@@ -149,8 +149,11 @@ pour la restauration du fichier nous pouvons remettre les secteurs utilisés dan
 - Appuyer sur Edit dans le menu en haut
 - Nous allons réecrire le contenue précedent (avant effacement des données) dans la FAT)
 - Sauvegarder les modification avec le boutton save (ne pas oublier de relancer Disk Editor)
+
 ![recovery titi](https://github.com/user-attachments/assets/7347b803-1fbb-4c6c-9443-7bcdaaa3d436)
+
 - On peut voir que le fichier et de retour
+
 ![titi le retour](https://github.com/user-attachments/assets/c53db823-097d-4ad8-9f5f-15148a567c86)
 
 ### Effet de la fragmentation des fichiers :
