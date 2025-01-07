@@ -35,6 +35,7 @@ Décodez les informations de(s) partition(s) en vous basant sur le support de co
 * Voici les adresses des débuts des partitions.
 
 ![nombre partition](https://github.com/user-attachments/assets/0e9c6cad-0fc2-4bf9-89cc-c7fc13c8bb9d)
+
 * Partition 1 : 1BE
 * Partition 2 : 1CE
 * Partition 3 : 1DE
@@ -83,11 +84,27 @@ espace cette zone occupe-t-elle ?
 ### Question E
  Calculez le secteur de début de la 1ère FAT, de la 2ème FAT (copie de sécurité de la 
 1ère), et de la zone de stockage de données. 
+
 ![MBR du taille réel du disque](https://github.com/user-attachments/assets/f5ee3b5b-78ae-4d61-b60a-3d11242af5b2)
+
 * la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la FAT1 (560 +3816).
   Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816))=3907521.
 ### Question F représentation graphique de la FAT
 
+![représantation graphique FAt](https://github.com/user-attachments/assets/d838aa00-a778-4a02-b7ba-a976748146b6)
+
+- FAT 1 début 560
+- FAT 2 début 4376
+- Il n'y a pas de corrélation entre les adresses de secteur calculé et les adresses visiblent dans le programme Disk editor, nous ne pouvons donc pas comparer
+ ### Question G et H
+
+![FAT1](https://github.com/user-attachments/assets/9bbc1162-d106-452e-ad6e-7c1dd298e283)
+
+* Nous remarquons que 3 secteur sont déja occupés
+
+![fichier titi toto tutu](https://github.com/user-attachments/assets/b92ca75b-35a5-4e38-95bd-b64d90883d45)
+
+* Nous pouvons voir qu'il y'a déjà des fichier caché
 ## Localistion d'un fichier
 Pour le fichier toto :
 - à l'offset 20 nous obtenons  le numéro du premier cluster du fichier (high word - 16 nits de poid fort) là 00 00
@@ -110,24 +127,35 @@ Pour le fichier tutu :
 - TUTU : 512 * 8 * 10 = 40960
 
 offset pas de corrélation !
+
 ![adresse des fichiers](https://github.com/user-attachments/assets/998eb368-b095-4d60-baaf-17f65f4a773b)
 
 ## Secteur utilisé :
 - en vert TOTO
 - en orange TITI
 - en rouge TUTU
+- 
 ![secteur fichier](https://github.com/user-attachments/assets/e0f14b0e-e766-4c15-88ce-d8e6aa1655bf)
 
 ## Visualisation du contenue des fichier :
 - Toto
+
  ![contenu toto](https://github.com/user-attachments/assets/9755bf21-394b-4474-8602-c04da39ba00c)
+ 
 - Titi (début)
+
  ![contenu titi1](https://github.com/user-attachments/assets/9a28c57c-2855-4b4c-a59c-339e70b4f940)
+ 
 - Titi (fin)
+
 ![contenu titi2](https://github.com/user-attachments/assets/7da72772-55bb-4e32-952e-565f53913c9b)
+
 - Tutu (début)
+
 ![contenu tutu1](https://github.com/user-attachments/assets/3999469a-e5ea-4610-9955-1afedbc5a842)
+
 - Tutu (fin)
+
 ![contenu tutu2](https://github.com/user-attachments/assets/99c0b5ab-6867-4c54-85f2-6ca87d23c697)
 
 ## Effacement d'un fichier :
@@ -158,33 +186,44 @@ pour la restauration du fichier nous pouvons remettre les secteurs utilisés dan
 
 ### Effet de la fragmentation des fichiers :
 - On constate que le fichier Titi prend plus de secteur.
+
 ![donée titi toujours présantes](https://github.com/user-attachments/assets/18d0065f-7ce7-4aa4-8136-8642bd8917c7)
+
 - Par rapport au adresse nous remarquons que le fichier Titi se trouve dans un secteur plus loin après le fichier Tutu, les données sont donc fragmenter dans deux secteurs qui ne se suivent pas
+
 ![titi suite donnée frag](https://github.com/user-attachments/assets/f105d639-fa58-4389-a5aa-807ec74df0fb)
 
 ## Expérimentation des noms de fichiers longs :
 ### Visualistion de la FAT :
 * les données souligner en jaune montre le fichier ajouté
+
 ![nom de fichier long fat](https://github.com/user-attachments/assets/25aeaee9-b922-4b01-bc54-4b6cf7058a66)
 
 ### Root directory :
 * dans le root directory nous pouvons voir que le nom prend plus de place
+
 ![root directory nom long](https://github.com/user-attachments/assets/1172d252-4239-4502-b508-7eb1c85cf8f8)
 
 ### Donnée du fichier :
 * nous pouvons remarquer que nous avons bien nos données dans le fichier (nom, classe et date )
+
 ![donnée nom long](https://github.com/user-attachments/assets/97359203-2876-4889-b345-62b2a7bccdfd)
 
 ## Expérimentation avec les sous-repertoires :
 ### Visualisation de FAT :
 * nous avons un nouveau secteur réserver dans la FAT
+  
 ![repertoire créé](https://github.com/user-attachments/assets/c1f33a80-2467-4db4-a291-add23b27e814)
+
 * dans le Boot record nous avons bien un nouveau dossier avec le nom essai
+  
 ![boot record essai](https://github.com/user-attachments/assets/25a9a5fa-6021-4eac-8c45-957b593b1b0c)
 
 ### Copie du fichier Toto : 
 * nous pouvons voir qu'un nouveau secteurs est réserver dans la FAT
+  
 ![copie toto](https://github.com/user-attachments/assets/45184513-647b-478c-9f1c-847a0156ca34)
+
 * nous ne constatons pas de modification dans le Root directory, ce nous parrait n'est pas normal.
 
 ### Déplacement du fichier Titi dans le repertoire essai :
