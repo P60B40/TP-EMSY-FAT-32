@@ -119,4 +119,42 @@ Secteur utilisé :
 - en rouge TUTU
 ![secteur fichier](https://github.com/user-attachments/assets/e0f14b0e-e766-4c15-88ce-d8e6aa1655bf)
 
+Visualisation du contenue des fichier :
+- Toto
+ ![contenu toto](https://github.com/user-attachments/assets/9755bf21-394b-4474-8602-c04da39ba00c)
+- Titi (début)
+ ![contenu titi1](https://github.com/user-attachments/assets/9a28c57c-2855-4b4c-a59c-339e70b4f940)
+- Titi (fin)
+![contenu titi2](https://github.com/user-attachments/assets/7da72772-55bb-4e32-952e-565f53913c9b)
+- Tutu (début)
+![contenu tutu1](https://github.com/user-attachments/assets/3999469a-e5ea-4610-9955-1afedbc5a842)
+- Tutu (fin)
+![contenu tutu2](https://github.com/user-attachments/assets/99c0b5ab-6867-4c54-85f2-6ca87d23c697)
+
+Effacement d'un fichier :
+Nous avons effacer le fichier Titi.txt
+![effacement du fichier titi](https://github.com/user-attachments/assets/bb909172-534f-4e13-b7b0-52c9490202cb)
+Dans la FAT nous ne voyons pas le fichier Titi on le voit avec les données 00 qui remplace les données FF, dans le Root directory Titi est toujours présent 
+![root directory titi toujours présant](https://github.com/user-attachments/assets/5897e496-0896-47d4-bcf2-22e2d0738ec2)
+Les données du fichier txt sont toujours présent :
+![donée titi toujours présantes](https://github.com/user-attachments/assets/13edd308-8b33-466e-bb36-7a9fa249eebc)
+
+Restauration d'un fichier effacer :
+pour la restauration du fichier nous pouvons remettre les secteurs utilisés dans la FAT
+
+Déscriptions de la manipulation :
+- appuyer sur Edit dans le menu en haut
+- Nous allons réecrire le contenue précedent (avant effacement des données) dans la FAT)
+- sauvegarder les modification avec le boutton save (ne pas oublier de relancer Disk Editor)
+![recovery titi](https://github.com/user-attachments/assets/7347b803-1fbb-4c6c-9443-7bcdaaa3d436)
+- on peut voir que le fichier et de retour
+![titi le retour](https://github.com/user-attachments/assets/c53db823-097d-4ad8-9f5f-15148a567c86)
+
+Effet de la fragmentation des fichiers :
+- on constate que le fichier Titi prend plus de secteur.
+![donée titi toujours présantes](https://github.com/user-attachments/assets/18d0065f-7ce7-4aa4-8136-8642bd8917c7)
+- Par rapport au adresse nous remarquons que le fichier Titi se trouve dans un secteur plus loin après le fichier Tutu, les données sont donc fragmenter dans deux secteurs qui ne se suivent pas
+![titi suite donnée frag](https://github.com/user-attachments/assets/f105d639-fa58-4389-a5aa-807ec74df0fb)
+- 
+
 
