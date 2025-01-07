@@ -84,9 +84,9 @@ espace cette zone occupe-t-elle ?
  Calculez le secteur de début de la 1ère FAT, de la 2ème FAT (copie de sécurité de la 
 1ère), et de la zone de stockage de données. 
 ![MBR du taille réel du disque](https://github.com/user-attachments/assets/f5ee3b5b-78ae-4d61-b60a-3d11242af5b2)
-
 * la 1ère FAT commence après les secteur reservé (560) la 2ème FAT commence après les secteur reservé plus les secteurs utilisé par la FAT1 (560 +3816).
   Stokage des donnée sur les secteur restant (3915713 -(560 + 2*3816))=3907521.
+### Question F représentation graphique de la FAT
 
 ## Localistion d'un fichier
 Pour le fichier toto :
@@ -141,18 +141,46 @@ Les données du fichier txt sont toujours présent :
 ## Restauration d'un fichier effacer :
 pour la restauration du fichier nous pouvons remettre les secteurs utilisés dans la FAT
 ### Déscriptions de la manipulation :
-- appuyer sur Edit dans le menu en haut
+- Appuyer sur Edit dans le menu en haut
 - Nous allons réecrire le contenue précedent (avant effacement des données) dans la FAT)
-- sauvegarder les modification avec le boutton save (ne pas oublier de relancer Disk Editor)
+- Sauvegarder les modification avec le boutton save (ne pas oublier de relancer Disk Editor)
 ![recovery titi](https://github.com/user-attachments/assets/7347b803-1fbb-4c6c-9443-7bcdaaa3d436)
-- on peut voir que le fichier et de retour
+- On peut voir que le fichier et de retour
 ![titi le retour](https://github.com/user-attachments/assets/c53db823-097d-4ad8-9f5f-15148a567c86)
 
 ### Effet de la fragmentation des fichiers :
-- on constate que le fichier Titi prend plus de secteur.
+- On constate que le fichier Titi prend plus de secteur.
 ![donée titi toujours présantes](https://github.com/user-attachments/assets/18d0065f-7ce7-4aa4-8136-8642bd8917c7)
 - Par rapport au adresse nous remarquons que le fichier Titi se trouve dans un secteur plus loin après le fichier Tutu, les données sont donc fragmenter dans deux secteurs qui ne se suivent pas
 ![titi suite donnée frag](https://github.com/user-attachments/assets/f105d639-fa58-4389-a5aa-807ec74df0fb)
- 
+
+## Expérimentation des noms de fichiers longs :
+### Visualistion de la FAT :
+* les données souligner en jaune montre le fichier ajouté
+![nom de fichier long fat](https://github.com/user-attachments/assets/25aeaee9-b922-4b01-bc54-4b6cf7058a66)
+
+### Root directory :
+* dans le root directory nous pouvons voir que le nom prend plus de place
+![root directory nom long](https://github.com/user-attachments/assets/1172d252-4239-4502-b508-7eb1c85cf8f8)
+
+### Donnée du fichier :
+* nous pouvons remarquer que nous avons bien nos données dans le fichier (nom, classe et date )
+![donnée nom long](https://github.com/user-attachments/assets/97359203-2876-4889-b345-62b2a7bccdfd)
+
+## Expérimentation avec les sous-repertoires :
+### Visualisation de FAT :
+* nous avons un nouveau secteur réserver dans la FAT
+![repertoire créé](https://github.com/user-attachments/assets/c1f33a80-2467-4db4-a291-add23b27e814)
+* dans le Boot record nous avons bien un nouveau dossier avec le nom essai
+![boot record essai](https://github.com/user-attachments/assets/25a9a5fa-6021-4eac-8c45-957b593b1b0c)
+
+### Copie du fichier Toto : 
+* nous pouvons voir qu'un nouveau secteurs est réserver dans la FAT
+![copie toto](https://github.com/user-attachments/assets/45184513-647b-478c-9f1c-847a0156ca34)
+* nous ne constatons pas de modification dans le Root directory, ce nous parrait n'est pas normal.
+
+### Déplacement du fichier Titi dans le repertoire essai :
+* Pas de modification dans la Fat
+* Dans la root directory pas de changement non plus
 
 
